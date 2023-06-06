@@ -3,5 +3,5 @@
 # Get the Python code from the environment variable
 py_code="$PYCODE"
 
-# Execute the Python code
-python -c "$py_code"
+# Execute
+python3 -c "$py_code"
