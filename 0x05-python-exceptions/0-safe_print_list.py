@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
+    elements = 0
     try:
-        count = 0
-        for element in my_list:
-            print(element, end=' ')
-            count += 1
-            if count == x:
-                break
+        for i in range(x):
+            print(my_list[i], end=" ")
+            elements += 1
         print()
-        return count
+    except IndexError:
+        print("\nError: Index out of range!")
     except TypeError:
-        print("Error: Invalid input!")
-        return 0
+        print("\nError: Invalid input type!")
+    finally:
+        return elements
