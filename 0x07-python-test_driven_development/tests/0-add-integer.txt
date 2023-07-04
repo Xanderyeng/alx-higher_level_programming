@@ -1,0 +1,77 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+'a and b are integers'
+>>> add_integer(2, 8)
+10
+
+'negatives'
+>>> add_integer(-2, -8)
+-10
+
+'float'
+>>> add_integer(2.5, 8.2)
+10
+
+'only a'
+>>> add_integer(2)
+100
+
+'a is char'
+>>> add_integer("2", 8)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+'b is char'
+>>> add_integer(2, "8")
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+'a or b is a touple'
+>>> add_integer((3, 2), 8)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+'a or b is a list'
+>>> add_integer([3, 2], (8,))
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+'An empty dictionary'
+>>> add_integer(2, {})
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+
+'no arguments'
+>>> add_integer()
+Traceback (most recent call last):
+	  ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+'3 arguments'
+>>> add_integer(2, 8, 10)
+Traceback (most recent call last):
+	  ...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+'overflow number'
+>>> add_integer(9999e9999)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+
+'a is a float cast string'
+>>> add_integer(float("hello"), 8)
+Traceback (most recent call last):
+	  ...
+ValueError: could not convert string to float: 'hello'
+
+'float cast nan'
+>>> add_integer(float('nan'), 3)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
