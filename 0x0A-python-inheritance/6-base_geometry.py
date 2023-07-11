@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-New class BaseGeometry
+Defines class BaseGeometry
 """
 
+
 class BaseGeometry:
-    """
-    class BaseGeometry
-    """
+    """ initializes class """
+    def __init__(self):
+        pass
+
+    """ public instance method area """
     def area(self):
-        """
-        function not implemented
-        """
         raise Exception("area() is not implemented")
