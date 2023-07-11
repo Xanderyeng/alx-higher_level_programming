@@ -3,14 +3,15 @@
 Write a class MyList that inherits from list
 """
 
+
 class MyList(list):
     """
-    class MyList with inheritance from List
+    MyList class that inherits from list.
     """
+
     def print_sorted(self):
         """
-        prints the list, but sorted (ascending sort)
+        Prints the list in ascending sorted order.
         """
-        new_list = self[:]
-        new_list.sort()
-        print(new_list)
+        sorted_list = sorted(self)
+        print(sorted_list)
