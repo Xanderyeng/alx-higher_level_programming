@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+A Module that draws the Pascals Triangle
+"""
+
+
 def pascal_triangle(n):
     """
     Generate Pascal's triangle up to the given height.
