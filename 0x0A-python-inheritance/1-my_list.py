@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 """
-defines class MyList that inherits from list
+Write a class MyList that inherits from list
 """
 
-
 class MyList(list):
-    """ initializes MyList """
-    def __init__(self):
-        pass
-
-    """ prints sorted list """
+    """
+    class MyList with inheritance from List
+    """
     def print_sorted(self):
-        print(sorted(self))
+        """
+        prints the list, but sorted (ascending sort)
+        """
+        new_list = self[:]
+        new_list.sort()
+        print(new_list)
