@@ -3,7 +3,7 @@
 Imports class Rectangle
 """
 
-Rectangle = __import__('9-rectangle').Rectangle
+from rectangle import Rectangle
 
 
 """
@@ -12,12 +12,12 @@ Defines class Square
 
 
 class Square(Rectangle):
-    """ initializes class """
+    """ Initializes class """
     def __init__(self, size):
-        super().__init__(size, size)
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
 
-    """ public instance method area """
-    def area(self):
+    """ Public instance method to calculate area """
+    def calculate_area(self):
         return self.__size ** 2
