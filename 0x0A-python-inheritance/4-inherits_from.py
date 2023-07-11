@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""
+Defines class inherited from specified class
+"""
+
 def inherits_from(obj, a_class):
-    """ returns True if obj is an instance of a_class or a class inherited
-    from a_class"""
-    return isinstance(obj, a_class) and not issubclass(a_class, type(obj))
+    """
+    check if object is an instance of or instance of a class.
+    """
+    return issubclass(type(obj), a_class) and type(obj) is not a_class
