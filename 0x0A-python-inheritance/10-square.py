@@ -19,5 +19,5 @@ class Square(Rectangle):
         self.__size = size
 
     """ Public instance method to calculate area """
-    def calculate_area(self):
+    def area(self):
         return self.__size ** 2
