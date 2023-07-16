@@ -1,0 +1,96 @@
+"""
+Class Rectangle
+Created: July 17, 2023
+By: Chepkiyeng Alexander
+"""
+from models.base import Base
+
+
+class Rectangle(Base):
+    """
+    class Rectangle inherits from Base
+    """
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Constructor.
+        atributes:
+        width: width of rectangle
+        height: height of rectangle
+        x: private value
+        y: private value
+        id: private value inherits from base
+        """
+
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+        super().__init__(id)
+
+        @property
+        """
+        property method for width
+        Return: value of width
+        """
+        def width_get(self):
+            return self.__width
+
+        @width.setter
+        """
+        setter method for width
+        Return: new value of width
+        """
+        def width_setter(self, value):
+            self.__width = value
+            return self.__width
+
+        @property
+        """
+        property method for height
+        Return: value of height
+        """
+        def height_get(self):
+            return self.__width
+
+        @height.setter
+        """
+        setter method for height
+        Return: value of height
+        """
+        def height_setter(self, value):
+            self.__height = value
+            return self.__height
+
+        @property
+        """
+        property method for x
+        Return: value of x
+        """
+        def x_get(self):
+            return self.__x
+
+        @hx.setter
+        """
+        setter method for x
+        Return: value of x
+        """
+        def x_setter(self, value):
+            self.__x = value
+            return self.__x
+
+        @property
+        """
+        property method for y
+        Return: value of y
+        """
+        def y_get(self):
+            return self.__y
+
+        @height.setter
+        """
+        setter method for y
+        Return: value of y
+        """
+        def y_setter(self, value):
+            self.__y = value
+            return self.__y
