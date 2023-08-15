@@ -1,2 +1,2 @@
--- script that removes all records with a score <= 5 --
+-- script that removes all records with a score --
 DELETE * FROM second_table WHERE score <= 5;
