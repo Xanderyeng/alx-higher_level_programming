@@ -1,9 +1,5 @@
--- script that creates the MySQL server user user_0d_1 --
--- Create user user_0d_1 if it doesn't exist
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
-
--- Grant all privileges to user_0d_1
+-- script that creates the MySQL server user user_0d_1
+-- with all conditions.
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost';
+SET PASSWORD FOR 'user_0d_1'@'localhost' = 'user_0d_1_pwd';
 GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
-
--- Flush privileges to apply changes
-FLUSH PRIVILEGES;
