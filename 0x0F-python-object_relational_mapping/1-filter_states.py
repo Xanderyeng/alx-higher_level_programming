@@ -1,27 +1,31 @@
 #!/usr/bin/python3
-"""
-    Write a script that lists all states starting with "N" from
-    the database hbtn_0e_0_usa
-"""
-import MySQLdb
 import sys
-arg = sys.argv
+import MySQLdb
 
+
+def get_states(username, password, db_name):
+    '''
+         lists all states with a name starting with N from the database
+    '''
+    db = MySQLdb.connect(host="localhost",
+                         user=username,
+                         passwd=password,
+                         db=db_name,
+                         port=3306)
+
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM `states`\
+                   WHERE `name` REGEXP '^N' ORDER BY `id` ASC")
+    rows = cursor.fetchall()
+    for row in rows:
+        if ("N" in row[1]):
+            print(row)
+    cursor.close()
+    db.close()
 
 if __name__ == "__main__":
-    if len(arg) > 4:
-        print("Usage: ./0-select_states.py username password database")
-    db = MySQLdb.connect(
-        host="localhost",
-        user=arg[1],
-        passwd=arg[2],
-        db=arg[3],
-        port=3306)
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE states.name\
-                LIKE BINARY 'N%' ORDER BY states.id")
-    names = cur.fetchall()
-    for item in names:
-        print(item)
-    cur.close()
-    db.close()
+    credentials = sys.argv
+    username = sys.argv[1]
+    passwd = sys.argv[2]
+    db_name = sys.argv[3]
+    get_states(username, passwd, db_name)
