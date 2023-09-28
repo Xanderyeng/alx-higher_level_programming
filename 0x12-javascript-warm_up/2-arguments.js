@@ -1,4 +1,5 @@
 #!/usr/bin/node
+// no arguement found
 const args = process.argv.slice(2); 
 
 if (args.length === 0) {
