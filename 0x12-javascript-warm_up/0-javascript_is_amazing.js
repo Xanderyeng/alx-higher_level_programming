@@ -1,3 +1,4 @@
 #!/usr/bin/node
-let item = 'JavaScript is amazing';
-console.log(item);
+// create a constant variable -  myVar
+const myVar = 'JavaScript is amazing';
+console.log(myVar);
